@@ -76,6 +76,21 @@ export default function Home() {
       </section>
 
       <section>
+        <h2 className="mb-3 text-xl font-semibold text-slate-900">What size rug for your bed?</h2>
+        <div className="flex flex-wrap gap-2.5">
+          {BEDS.map((b) => (
+            <Link
+              key={b.slug}
+              href={`/rug-size/${b.slug}-bed`}
+              className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-teal-300 hover:text-teal-700"
+            >
+              Rug size for a {b.name} bed →
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section>
         <h2 className="mb-3 text-xl font-semibold text-slate-900">Browse by bed size</h2>
         <div className="flex flex-wrap gap-2.5">
           {BEDS.map((b) => (
